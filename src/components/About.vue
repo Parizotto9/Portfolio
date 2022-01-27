@@ -32,6 +32,7 @@ export default {};
   height: 110px;
   padding: 40px;
   border-radius: 25px;
+  box-shadow: 0 32px 60px rgba(0, 0, 0, 0.07);
 }
 .divimg {
   position: relative;
@@ -42,13 +43,14 @@ export default {};
   top: 160px;
   left: -210px;
   width: 250px;
+  box-shadow: 0 32px 60px rgba(0, 0, 0, 0.07);
   border-radius: 30px 0px 30px 30px;
 }
 .about {
   display: flex;
   justify-content: end;
   margin-top: 120px;
-  margin-right: 20%;
+  margin-right: 10%;
   height: 600px;
 }
 h1 {

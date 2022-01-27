@@ -6,7 +6,7 @@
       </section>
       <section class="buttons">
         <span @click="clicar('/')">Home</span>
-        <button type="button"><span>Home</span></button>
+        <!-- <button type="button"><span>Home</span></button> -->
         <span @click="clicar('/about')">About</span>
         <span @click="clicar('/skills')">Skills</span>
         <span @click="clicar('/portfolio')">Portfolio</span>

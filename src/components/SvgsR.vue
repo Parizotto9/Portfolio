@@ -540,290 +540,170 @@ export default {};
 </script>
 
 <style scoped>
-.a {
+svg {
   position: fixed;
-  top: -10px;
-  right: 7%;
-  transform: rotate(45deg);
   fill: #04d7a2;
   height: 20px;
   z-index: -1;
+}
+.a {
+  top: -1%;
+  right: 7%;
+  transform: rotate(45deg);
 }
 .b {
-  position: fixed;
-  top: 40px;
+  top: 3%;
   right: 3%;
   transform: rotate(100deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .c {
-  position: fixed;
-  top: 100px;
+  top: 9%;
   right: 5%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .d {
-  position: fixed;
-  top: 150px;
+  top: 15%;
   right: -0.7%;
   transform: rotate(30deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .e {
-  position: fixed;
-  top: 210px;
+  top: 24%;
   right: 2.5%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .f {
-  position: fixed;
-  top: 250px;
+  top: 37%;
   right: 9%;
   transform: rotate(-10deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .g {
-  position: fixed;
-  top: 300px;
+  top: 30%;
   right: 6.4%;
   transform: rotate(180deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .h {
-  position: fixed;
-  top: 360px;
+  top: 42%;
   right: 3%;
   transform: rotate(30deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .i {
-  position: fixed;
-  top: 430px;
+  top: 36%;
   right: 1%;
   transform: rotate(15deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .j {
-  position: fixed;
-  top: 580px;
+  top: 48%;
   right: 8%;
   transform: rotate(110deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .k {
-  position: fixed;
-  top: 630px;
+  top: 52%;
   right: 1%;
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .l {
-  position: fixed;
-  top: 680px;
+  top: 90%;
   right: 5%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .m {
-  position: fixed;
-  top: 760px;
+  top: 99%;
   right: 2%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .n {
-  position: fixed;
-  top: 500px;
+  top: 58%;
   right: 6%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .o {
-  position: fixed;
-  top: 550px;
+  top: 70%;
   right: 2%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .p {
-  position: fixed;
-  top: 450px;
+  top: 68%;
   right: 9.2%;
   transform: rotate(90deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .q {
-  position: fixed;
-  top: 400px;
+  top: 80%;
   right: 7%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .r {
-  position: fixed;
-  top: 280px;
+  top: 85%;
   right: 1%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .s {
-  position: fixed;
-  top: 170px;
+  top: 20%;
   right: 7%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .t {
-  position: fixed;
-  top: 700px;
+  top: 95%;
   right: -0.8%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .u {
-  position: fixed;
-  top: 480px;
+  top: 63%;
   right: -0.7%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .v {
-  position: fixed;
-  top: 60px;
+  top: 13%;
   right: 9.2%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .x {
-  position: fixed;
-  top: 735px;
+  top: 96%;
   right: 8%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .y {
-  position: fixed;
-  top: 720px;
+  top: 98.2%;
   right: 12%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .z {
-  position: fixed;
-  top: 750px;
+  top: 96.6%;
   right: 18%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .aa {
-  position: fixed;
-  top: 725px;
+  top: 94%;
   right: 22%;
   transform: rotate(45deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .ab {
-  position: fixed;
-  top: 740px;
+  top: 97%;
   right: 28%;
   transform: rotate(30deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .ac {
-  position: fixed;
-  top: 735px;
+  top: 99%;
   right: 33%;
   transform: rotate(115deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .ad {
-  position: fixed;
-  top: 750px;
+  top: 97.2%;
   right: 38%;
   transform: rotate(145deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .ae {
-  position: fixed;
-  top: 760px;
+  top: 99%;
   right: 43%;
   transform: rotate(155deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .af {
-  position: fixed;
-  top: 720px;
+  top: 94%;
   right: 41%;
   transform: rotate(180deg);
-  fill: #04d7a2;
-  height: 20px;
-  z-index: -1;
 }
 .ag {
-  position: fixed;
-  top: 730px;
+  top: 96%;
   right: 46%;
   transform: rotate(45deg);
-  fill: #04d7a2;
   height: 20px;
   z-index: -1;
 }

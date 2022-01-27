@@ -40,8 +40,9 @@ export default {
 #app {
   z-index: 10;
   background-color: #daf0fc;
-  margin: 0px 150px;
+  margin: 0px 9.8%;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 body {
   background-color: #152837;

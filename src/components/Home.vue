@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <section class="balls">
+      <div class="ball"></div>
+    </section>
     <section class="text">
       <p>FrontEnd</p>
       <p>Developer</p>
@@ -16,8 +19,20 @@ export default {};
 .home {
   margin-top: -250px;
   margin-bottom: 300px;
+  position: relative;
+}
+.ball {
+  position: absolute;
+  width: 400px;
+  left: -70px;
+  top: -40px;
+  height: 400px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #152837 5%, #04d7a2 100%);
+  filter: blur(10px);
 }
 .text {
+  mix-blend-mode: darken;
   margin-left: 10%;
 }
 h4 {
