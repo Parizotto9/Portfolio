@@ -48,7 +48,9 @@ body {
   background-color: #152837;
 }
 * {
+  scroll-behavior: smooth;
   margin: 0px;
   padding: 0px;
+  font-family: "Noto Serif", serif;
 }
 </style>

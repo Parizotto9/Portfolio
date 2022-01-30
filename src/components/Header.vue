@@ -30,8 +30,7 @@ export default {
 <style scoped>
 .logo {
   max-width: 80px;
-}
-.gradient {
+  margin-left: 90px;
 }
 .btnsarea {
   z-index: 10;
@@ -42,8 +41,8 @@ export default {
 .divider {
   height: 50px;
   border-right: solid 2px #04d7a2;
-  margin-right: 40px;
-  margin-left: -40px;
+  margin-right: 30px;
+  margin-left: -30px;
 }
 .buttons {
   display: flex;
@@ -53,7 +52,7 @@ span {
   cursor: pointer;
   font-weight: 600;
   font-size: 1.6rem;
-  margin-right: 80px;
+  margin-right: 60px;
 }
 .header {
   padding: 20px 30px;

@@ -123,7 +123,7 @@ li:nth-child(4):hover a {
   color: #007bb6;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 .place {
   font-size: 1.1rem;

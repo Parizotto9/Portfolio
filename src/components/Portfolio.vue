@@ -42,6 +42,6 @@ p {
   margin-top: 20px;
   inline-size: 550px;
   overflow-wrap: break-word;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 </style>

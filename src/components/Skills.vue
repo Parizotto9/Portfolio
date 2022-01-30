@@ -29,6 +29,7 @@ export default {};
 .skills {
   padding: 50px;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   background-color: #a9cadc;
   height: 600px;
@@ -42,7 +43,7 @@ h1 {
 .tools {
   display: grid;
   gap: 15px;
-  margin-top: 70px;
+  margin-top: 20px;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
   color: rgb(245, 245, 245);
@@ -59,6 +60,7 @@ p {
   border-radius: 20px;
   text-transform: uppercase;
   font-weight: 800;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.07);
 }
 .a {
   background-image: url("./../assets/Js.png");
