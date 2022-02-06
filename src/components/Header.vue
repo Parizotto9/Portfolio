@@ -30,7 +30,7 @@ export default {
 <style scoped>
 .logo {
   max-width: 80px;
-  margin-left: 90px;
+  margin-left: 15%;
 }
 .btnsarea {
   z-index: 10;

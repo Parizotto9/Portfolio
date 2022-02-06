@@ -63,10 +63,19 @@ export default {};
 }
 .about {
   display: flex;
-  justify-content: end;
+  margin-left: 210px;
+  justify-content: center;
   margin-top: 120px;
-  margin-right: 10%;
   height: 600px;
+}
+
+@media (max-width: 1280px) and (min-width: 700) {
+}
+@media (min-width: 1400px) {
+  .about {
+    justify-content: end;
+    margin-right: 10%;
+  }
 }
 p {
   font-size: 1.1rem;
