@@ -57,10 +57,89 @@ export default {};
 </script>
 
 <style scoped>
+@media (max-width: 700px) {
+  .contact {
+    padding: 30px 0px 50px 0px;
+  }
+  .img {
+    margin: auto;
+  }
+  li {
+    margin: 10px;
+  }
+  ul {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .text {
+    inline-size: 300px;
+    margin: auto;
+    overflow-wrap: break-word;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+  .place {
+    font-size: 0.7rem;
+  }
+  .sect {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 700px) and (max-width: 1280px) {
+  p {
+    font-size: 1.2rem;
+  }
+  .text {
+    inline-size: 340px;
+    overflow-wrap: break-word;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  .contact {
+    padding: 30px 10px 50px 10px;
+  }
+}
+@media (min-width: 1280px) {
+  p {
+    font-size: 1.3rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  .text {
+    inline-size: 400px;
+    overflow-wrap: break-word;
+  }
+  .contact {
+    padding: 50px;
+  }
+}
+@media (min-width: 700px) {
+  .sect {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding-bottom: 30px;
+  }
+  li {
+    margin-left: 10px;
+  }
+  ul {
+    display: flex;
+    margin-top: 30px;
+  }
+}
 .contact {
   justify-content: center;
   text-align: center;
-  padding: 50px;
   background-color: #a9cadc;
   position: relative;
 }
@@ -70,19 +149,6 @@ export default {};
   left: 0;
   bottom: 0px;
   background-color: #04d7a2;
-}
-.sect {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-  padding-bottom: 30px;
-}
-p {
-  font-size: 1.3rem;
-}
-ul {
-  display: flex;
-  margin-top: 30px;
 }
 a {
   color: #04d7a2;
@@ -98,7 +164,6 @@ li {
   height: 30px;
   width: 30px;
   border-radius: 80px;
-  margin-left: 10px;
   list-style: none;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
 }
@@ -122,9 +187,6 @@ li:nth-child(4):hover a {
   transition: 0.6s;
   color: #007bb6;
 }
-h1 {
-  font-size: 3.5rem;
-}
 .place {
   font-size: 1.1rem;
   margin-top: 40px;
@@ -144,10 +206,7 @@ h1 {
   color: #04d7a2;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
 }
-.text {
-  inline-size: 400px;
-  overflow-wrap: break-word;
-}
+
 img {
   width: 100px;
 }
