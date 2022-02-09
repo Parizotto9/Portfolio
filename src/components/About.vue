@@ -26,12 +26,77 @@ export default {};
 </script>
 
 <style scoped>
+@media (max-width: 600px) {
+  .about {
+    margin-bottom: 50px;
+  }
+  .img {
+    top: 250px;
+    left: 25px;
+    border-radius: 20px;
+    border: solid 5px #a9cadc;
+  }
+  .title {
+    font-size: 2.8rem;
+    top: -35px;
+  }
+  p {
+    font-size: 0.92rem;
+  }
+  .box {
+    text-align: center;
+    width: 260px;
+    height: 225px;
+    padding: 20px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .img {
+    border-radius: 0px 0px 30px 30px;
+    top: 200px;
+    left: 130px;
+  }
+  .box {
+    width: 450px;
+    height: 140px;
+    padding: 40px;
+  }
+  .title {
+    font-size: 2.8rem;
+    top: -35px;
+  }
+  .box::before {
+    top: -490px;
+  }
+}
+@media (min-width: 1200px) {
+  .about {
+    margin-left: 210px;
+  }
+  .title {
+    font-size: 3.5rem;
+    top: -45px;
+  }
+  .img {
+    border-radius: 30px 0px 30px 30px;
+    top: 180px;
+    left: -210px;
+  }
+  .box {
+    width: 600px;
+    height: 140px;
+    padding: 50px;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .box::before {
+    top: -590px;
+  }
+}
 .box {
   position: relative;
   background-color: #a9cadc;
-  width: 600px;
-  height: 140px;
-  padding: 50px;
   border-radius: 25px;
   box-shadow: 0 32px 60px rgba(0, 0, 0, 0.07);
   overflow: hidden;
@@ -39,7 +104,6 @@ export default {};
 .box::before {
   content: "";
   position: absolute;
-  top: -590px;
   left: -15%;
   width: 100%;
   height: 320%;
@@ -54,22 +118,14 @@ export default {};
 .img {
   position: absolute;
   width: 300px;
-  top: 180px;
-  left: -210px;
   width: 250px;
-  box-shadow: 0 32px 60px rgba(0, 0, 0, 0.07);
-  border-radius: 30px 0px 30px 30px;
+  box-shadow: 5px 32px 20px rgba(0, 0, 0, 0.07);
   z-index: 1;
 }
 .about {
   display: flex;
-  margin-left: 210px;
   justify-content: center;
-  margin-top: 120px;
   height: 600px;
-}
-
-@media (max-width: 1280px) and (min-width: 700) {
 }
 @media (min-width: 1400px) {
   .about {
@@ -77,9 +133,7 @@ export default {};
     margin-right: 10%;
   }
 }
-p {
-  font-size: 1.1rem;
-}
+
 article {
   position: relative;
 }
@@ -92,8 +146,6 @@ article .title {
   left: 0;
   right: 0;
   text-align: center;
-  top: -45px;
-  font-size: 3.5rem;
   overflow: visible;
 }
 .menu {
