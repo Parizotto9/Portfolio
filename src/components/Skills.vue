@@ -3,7 +3,7 @@
     <section>
       <h1>Skills</h1>
       <img src="./../assets/nuxt.png" alt="Working" />
-      <article>
+      <article class="desk">
         <p>This are some of the tools that I work with</p>
       </article>
     </section>
@@ -18,6 +18,9 @@
         <div class="g box"></div>
       </div>
     </section>
+    <article class="mob">
+      <p>This are some of the tools that I work with</p>
+    </article>
   </div>
 </template>
 
@@ -26,31 +29,96 @@ export default {};
 </script>
 
 <style scoped>
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.8rem;
+    padding-bottom: 10px;
+  }
+  p {
+    margin-top: 00px;
+  }
+  img {
+    display: none;
+  }
+  .skills {
+    flex-direction: column;
+  }
+  .desk {
+    display: none;
+  }
+  .tools {
+    gap: 7px;
+    grid-template-columns: repeat(4, 65px);
+    grid-template-rows: repeat(4, 65px);
+  }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .desk {
+    display: none;
+  }
+  p {
+    margin-top: 20px;
+  }
+  h1 {
+    font-size: 2.8rem;
+    padding-bottom: 10px;
+  }
+  img {
+    display: none;
+  }
+  .skills {
+    flex-direction: column;
+    height: 650px;
+  }
+  .tools {
+    gap: 15px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+  }
+}
+@media (min-width: 1200px) {
+  .tools {
+    gap: 15px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+  }
+  .mob {
+    display: none;
+  }
+  h1 {
+    font-size: 3.5rem;
+    padding-bottom: 40px;
+  }
+  .skills {
+    height: 600px;
+  }
+  p {
+    margin-top: 20px;
+  }
+}
 .skills {
   padding: 50px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #a9cadc;
-  height: 600px;
+
   box-shadow: inset 0em 0em 2em 0.5em rgba(0, 0, 0, 0.25);
 }
 h1 {
   text-align: center;
-  font-size: 4rem;
-  padding-bottom: 40px;
 }
 .tools {
   display: grid;
-  gap: 15px;
   margin-top: 20px;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(4, 100px);
   color: rgb(245, 245, 245);
+}
+.mob {
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 p {
   text-align: center;
-  margin-top: 20px;
   inline-size: 300px;
   overflow-wrap: break-word;
   font-weight: 600;
