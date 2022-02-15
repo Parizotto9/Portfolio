@@ -13,7 +13,7 @@
       <div class="line line2"></div>
       <div class="ball"></div>
       <div class="glassBall ball2"></div>
-      <div class="glassBall ball3"></div> 
+      <div class="glassBall ball3"></div>
       <div class="glassBall ball4"></div>
       <div class="square square1"></div>
       <div class="square square2"></div>
@@ -175,7 +175,7 @@ export default {};
     background-color: #04d7a2;
   }
   .line1 {
-    width: 600px;
+    width: 800px;
     left: 60%;
     top: 60px;
   }
