@@ -546,6 +546,23 @@ svg {
   height: 20px;
   z-index: -1;
 }
+@media (max-width: 850px) {
+  .ag,
+  .y,
+  .ab,
+  .ae {
+    display: none;
+  }
+  .aa {
+    right: 25% !important;
+  }
+  .ac {
+    right: 31% !important;
+  }
+  .ad {
+    right: 37% !important;
+  }
+}
 .a {
   top: -1%;
   right: 7%;

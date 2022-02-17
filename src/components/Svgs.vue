@@ -545,6 +545,23 @@ export default {};
 </script>
 
 <style scoped>
+@media (max-width: 850px) {
+  .ag,
+  .y,
+  .ab,
+  .ae {
+    display: none;
+  }
+  .aa {
+    left: 25% !important;
+  }
+  .ac {
+    left: 31% !important;
+  }
+  .ad {
+    left: 37% !important;
+  }
+}
 svg {
   position: fixed;
   fill: #04d7a2;

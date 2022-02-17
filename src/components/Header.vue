@@ -108,7 +108,6 @@ export default {
   }
   .drawer {
     font-size: 2.4rem;
-    color: #04d7a2;
     margin-right: 20px;
   }
   .header {
