@@ -230,6 +230,7 @@ export default {};
   }
   .img {
     width: 400px;
+    opacity: 0;
   }
   .ball {
     width: 400px;
@@ -259,6 +260,7 @@ export default {};
 @media (min-width: 1280px) {
   .img {
     width: 500px;
+    opacity: 0;
   }
   .line2 {
     top: 320px;
@@ -279,6 +281,62 @@ export default {};
   position: absolute;
   border-radius: 50%;
   background: linear-gradient(90deg, #152837 5%, #04d7a2 100%);
+}
+@keyframes bouncing {
+  from {
+    transform: translateY(13px);
+  }
+}
+@keyframes has-shown {
+  from {
+    transform: translateX(40vw);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes has-shownL1 {
+  from {
+    transform: translateX(40vw);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.line1,
+.square1 {
+  animation: has-shownL1 1.5s ease-in-out forwards;
+}
+.line2,
+.square2 {
+  animation: has-shownL2 1.5s ease-in-out forwards;
+}
+@keyframes has-shownL2 {
+  from {
+    transform: translateX(-40vw);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+img {
+  animation: has-shown 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+.ball2 {
+  animation: bouncing 6s ease-in-out infinite alternate;
+}
+.ball3 {
+  animation: bouncing 4s ease-in-out infinite alternate;
+}
+.ball4 {
+  animation: bouncing 2.5s ease-in-out infinite alternate;
 }
 .text {
   z-index: 1;

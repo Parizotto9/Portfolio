@@ -5,7 +5,7 @@
         <img class="img" src="./../assets/me.png" alt="Parizotto" />
       </div>
     </section>
-    <section style="position: relative">
+    <section class="has-shown" style="position: relative">
       <h1 class="title">About</h1>
       <article class="box">
         <p>
@@ -100,6 +100,7 @@ export default {};
   border-radius: 25px;
   box-shadow: 0 32px 60px rgba(0, 0, 0, 0.07);
   overflow: hidden;
+  transition: box-shadow 0.5s;
 }
 .box::before {
   content: "";
@@ -133,7 +134,37 @@ export default {};
     margin-right: 10%;
   }
 }
-
+@keyframes has-shown {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes has-shownI {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+img {
+  animation: has-shownI 2s ease-out forwards;
+  opacity: 0;
+}
+.has-shown {
+  animation: has-shown 2s ease-out forwards;
+  opacity: 0;
+}
+.box:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
 article {
   position: relative;
 }
