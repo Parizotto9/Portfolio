@@ -562,7 +562,13 @@ export default {};
     left: 37% !important;
   }
 }
+@keyframes is-pulsing {
+  from {
+    transform: translateY(10px);
+  }
+}
 svg {
+  animation: is-pulsing 4s ease-in-out infinite alternate;
   position: fixed;
   fill: #04d7a2;
   height: 20px;

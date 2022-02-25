@@ -541,10 +541,16 @@ export default {};
 
 <style scoped>
 svg {
+  animation: is-pulsing 4s ease-in-out infinite alternate;
   position: fixed;
   fill: #04d7a2;
   height: 20px;
   z-index: -1;
+}
+@keyframes is-pulsing {
+  from {
+    transform: translateY(10px);
+  }
 }
 @media (max-width: 850px) {
   .ag,

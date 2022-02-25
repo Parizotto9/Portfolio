@@ -137,6 +137,30 @@ export default {};
     margin-top: 30px;
   }
 }
+@keyframes has-shown {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.text {
+  animation: has-shown 2s ease-out forwards;
+  animation-delay: 400ms;
+  opacity: 0;
+}
+.img {
+  animation: has-shown 2s ease-out forwards;
+  animation-delay: 400ms;
+  opacity: 0;
+}
+
+h1 {
+  animation: has-shown 2s ease-out forwards;
+}
 .contact {
   justify-content: center;
   text-align: center;

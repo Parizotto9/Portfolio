@@ -330,7 +330,7 @@ img {
   animation-delay: 0.5s;
 }
 .ball2 {
-  animation: bouncing 6s ease-in-out infinite alternate;
+  animation: bouncing 5s ease-in-out infinite alternate;
 }
 .ball3 {
   animation: bouncing 4s ease-in-out infinite alternate;

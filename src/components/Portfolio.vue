@@ -65,6 +65,30 @@ export default {};
     padding: 40px;
   }
 }
+@keyframes has-shown {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes has-shownI {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+img {
+  animation: has-shownI 2s ease-out forwards;
+}
+
 .portfolio {
   display: flex;
   justify-content: center;
@@ -74,6 +98,7 @@ h1 {
   text-align: center;
 }
 .text {
+  animation: has-shown 2s ease-out forwards;
   margin-top: 100px;
 }
 .imagebox {
