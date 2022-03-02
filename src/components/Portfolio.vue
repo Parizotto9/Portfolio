@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio">
+  <div class="portfolio" @click="scroll()">
     <section class="text">
       <h1>Portfolio</h1>
       <p>
@@ -17,7 +17,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      textSection: "",
+      imgSection: "",
+      clientHeight: document.documentElement.getBoundingClientRect(),
+    };
+  },
+  methods: {
+    scroll() {
+      this.textSection = document.querySelector(".text");
+      this.imgSection = document.querySelector(".imagebox");
+      console.log(this.textSection, this.imgSection, this.clientHeight, "alo");
+    },
+  },
+};
 </script>
 
 <style scoped>

@@ -22,7 +22,20 @@
 </template>
 
 <script>
-export default {};
+import { mapActions } from "vuex";
+export default {
+  created() {
+    window.addEventListener("scroll", this.scroll);
+  },
+  methods: {
+    ...mapActions({
+      isInViewport: "isInViewport",
+    }),
+    scroll() {
+      console.log("home");
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -163,7 +176,7 @@ export default {};
     width: 10px;
     height: 10px;
     top: 265px;
-    left: 50%;
+    left: 43%;
   }
   .square2::before {
     content: "";
@@ -175,7 +188,7 @@ export default {};
     background-color: #04d7a2;
   }
   .line1 {
-    width: 800px;
+    width: 1200px;
     left: 60%;
     top: 60px;
   }
