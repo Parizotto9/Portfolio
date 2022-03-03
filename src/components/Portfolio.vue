@@ -1,6 +1,6 @@
 <template>
-  <div class="portfolio" @click="scroll()">
-    <section class="text">
+  <div class="portfolio" :class="isShown ? '' : 'space'">
+    <section class="text" v-if="isShown">
       <h1>Portfolio</h1>
       <p>
         I am now working as a freelancer for a brazilian company Projeto
@@ -10,7 +10,7 @@
         growing and learning everything I can.
       </p>
     </section>
-    <section class="imagebox">
+    <section class="imagebox" v-if="isShown">
       <img src="./../assets/coding.png" alt="Coding" />
     </section>
   </div>
@@ -20,16 +20,36 @@
 export default {
   data() {
     return {
-      textSection: "",
-      imgSection: "",
-      clientHeight: document.documentElement.getBoundingClientRect(),
+      isShown: false,
     };
   },
+  created() {
+    window.addEventListener("scroll", this.scroll);
+  },
   methods: {
-    scroll() {
-      this.textSection = document.querySelector(".text");
-      this.imgSection = document.querySelector(".imagebox");
-      console.log(this.textSection, this.imgSection, this.clientHeight, "alo");
+    async scroll() {
+      this.isShown = await this.isInViewport();
+    },
+    isInViewport() {
+      const el = document.querySelector(".portfolio");
+      const rect = el.getBoundingClientRect();
+      if (this.isShown === true) {
+        return (
+          rect.top >= -600 &&
+          rect.bottom <=
+            750 + (window.innerHeight || document.documentElement.clientHeight)
+        );
+      } else {
+        return (
+          rect.top >= -500 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            250 +
+              (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
     },
   },
 };
@@ -37,6 +57,9 @@ export default {
 
 <style scoped>
 @media (max-width: 600px) {
+  .space {
+    margin-top: 726px;
+  }
   p {
     font-size: 0.92rem;
     inline-size: 290px !important;
@@ -50,9 +73,13 @@ export default {
   }
   img {
     width: 300px;
+    animation: has-shownI 4s ease-out forwards !important;
   }
 }
 @media (min-width: 600px) and (max-width: 1000px) {
+  .space {
+    margin-top: 718px;
+  }
   .portfolio {
     flex-direction: column;
     align-items: center;
@@ -60,8 +87,14 @@ export default {
   h1 {
     font-size: 2.8rem;
   }
+  img {
+    animation: has-shownI 4s ease-out forwards !important;
+  }
 }
 @media (min-width: 1000px) and (max-width: 1200px) {
+  .space {
+    margin-top: 427px;
+  }
   h1 {
     font-size: 2.8rem;
   }
@@ -70,6 +103,9 @@ export default {
   }
 }
 @media (min-width: 1200px) {
+  .space {
+    margin-top: 427px;
+  }
   h1 {
     font-size: 3.5rem;
   }

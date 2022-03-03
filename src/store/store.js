@@ -8,6 +8,7 @@ export const store = new Vuex.Store({
   getters: {},
   actions: {
     isInViewport(el) {
+      console.log(el, "oi");
       const rect = el.getBoundingClientRect();
       return (
         rect.top >= 0 &&

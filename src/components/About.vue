@@ -1,11 +1,11 @@
 <template>
   <div class="about">
-    <section>
+    <section v-if="isShown">
       <div class="divimg">
-        <img class="img" src="./../assets/me.png" alt="Parizotto" />
+        <img class="img" id="img" src="./../assets/me.png" alt="Parizotto" />
       </div>
     </section>
-    <section class="has-shown" style="position: relative">
+    <section v-if="isShown" class="has-shown" style="position: relative">
       <h1 class="title">About</h1>
       <article class="box">
         <p>
@@ -22,7 +22,42 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isShown: false,
+    };
+  },
+  created() {
+    window.addEventListener("scroll", this.scroll);
+  },
+  methods: {
+    async scroll() {
+      this.isShown = await this.isInViewport();
+    },
+    isInViewport() {
+      const el = document.querySelector(".about");
+      const rect = el.getBoundingClientRect();
+      if (this.isShown === true) {
+        return (
+          rect.top >= -600 &&
+          rect.bottom <=
+            600 + (window.innerHeight || document.documentElement.clientHeight)
+        );
+      } else {
+        return (
+          rect.top >= -200 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            200 +
+              (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>

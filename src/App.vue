@@ -20,7 +20,7 @@ import Portfolio from "./components/Portfolio.vue";
 import Contact from "./components/Contact.vue";
 import Svgs from "./components/Svgs.vue";
 import SvgsR from "./components/SvgsR.vue";
-import { mapActions } from "vuex";
+/* import { mapActions } from "vuex"; */
 
 export default {
   name: "App",
@@ -34,7 +34,7 @@ export default {
     Svgs,
     SvgsR,
   },
-  created() {
+  /* created() {
     window.addEventListener("scroll", this.console());
   },
   methods: {
@@ -45,7 +45,7 @@ export default {
     scroll() {
       console.log("alo");
     },
-  },
+  }, */
 };
 </script>
 

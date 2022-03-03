@@ -3,36 +3,59 @@
     <section class="text">
       <p>FrontEnd</p>
       <p>Developer</p>
-      <h4>A junior FrontEnd developer searching to grow and learn</h4>
+      <h4 :class="isShown ? '' : 'space'">
+        A junior FrontEnd developer searching to grow and learn
+      </h4>
     </section>
-    <section>
+    <section v-if="isShown">
       <img src="./../assets/svgs/home.svg" alt="home img" class="img" />
     </section>
     <section class="balls">
-      <div class="line line1"></div>
-      <div class="line line2"></div>
+      <div class="line line1" v-if="isShown"></div>
+      <div class="line line2" v-if="isShown"></div>
       <div class="ball"></div>
       <div class="glassBall ball2"></div>
       <div class="glassBall ball3"></div>
       <div class="glassBall ball4"></div>
-      <div class="square square1"></div>
-      <div class="square square2"></div>
+      <div class="square square1" v-if="isShown"></div>
+      <div class="square square2" v-if="isShown"></div>
     </section>
   </div>
 </template>
 
 <script>
-import { mapActions } from "vuex";
 export default {
+  data() {
+    return {
+      isShown: true,
+    };
+  },
   created() {
     window.addEventListener("scroll", this.scroll);
   },
   methods: {
-    ...mapActions({
-      isInViewport: "isInViewport",
-    }),
-    scroll() {
-      console.log("home");
+    async scroll() {
+      this.isShown = await this.isInViewport();
+    },
+    isInViewport() {
+      const el = document.querySelector(".home");
+      const rect = el.getBoundingClientRect();
+      if (this.isShown === true) {
+        return (
+          rect.top >= -300 &&
+          rect.bottom <=
+            0 + (window.innerHeight || document.documentElement.clientHeight)
+        );
+      } else {
+        return (
+          rect.top >= -100 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
     },
   },
 };
@@ -235,6 +258,9 @@ export default {
   }
 }
 @media (min-width: 960px) {
+  .space {
+    margin-bottom: 40px;
+  }
   .line1 {
     top: -40px;
   }
@@ -271,6 +297,9 @@ export default {
   }
 }
 @media (min-width: 1280px) {
+  .space {
+    margin-bottom: 64.24px;
+  }
   .img {
     width: 500px;
     opacity: 0;

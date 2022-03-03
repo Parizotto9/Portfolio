@@ -1,9 +1,9 @@
 <template>
-  <div class="contact">
-    <section>
+  <div class="contact" :class="isShown ? '' : 'space'">
+    <section v-if="isShown">
       <h1>Contact me</h1>
     </section>
-    <section class="sect">
+    <section class="sect" v-if="isShown">
       <div class="img">
         <img src="./../assets/logo.png" alt="" />
         <ul>
@@ -53,11 +53,52 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isShown: false,
+    };
+  },
+  created() {
+    window.addEventListener("scroll", this.scroll);
+  },
+  methods: {
+    async scroll() {
+      this.isShown = await this.isInViewport();
+      console.log(this.isShown);
+    },
+    isInViewport() {
+      const el = document.querySelector(".contact");
+      console.log(el, "el");
+      const rect = el.getBoundingClientRect();
+      console.log(rect.top, rect.bottom, document.documentElement.clientHeight);
+      if (this.isShown === true) {
+        return (
+          rect.top >= 0 &&
+          rect.bottom <=
+            400 + (window.innerHeight || document.documentElement.clientHeight)
+        );
+      } else {
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            150 +
+              (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
 @media (max-width: 700px) {
+  .space {
+    min-height: 400.516px;
+  }
   .contact {
     padding: 30px 0px 50px 0px;
   }
@@ -93,6 +134,9 @@ export default {};
   }
 }
 @media (min-width: 700px) and (max-width: 1280px) {
+  .space {
+    min-height: 319px;
+  }
   p {
     font-size: 1.2rem;
   }
@@ -108,6 +152,9 @@ export default {};
   }
 }
 @media (min-width: 1280px) {
+  .space {
+    min-height: 338px;
+  }
   p {
     font-size: 1.3rem;
   }
