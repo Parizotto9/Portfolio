@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div id="about" class="about">
     <section v-if="isShown">
       <div class="divimg">
         <img class="img" id="img" src="./../assets/me.png" alt="Parizotto" />

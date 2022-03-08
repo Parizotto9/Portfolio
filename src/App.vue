@@ -34,18 +34,6 @@ export default {
     Svgs,
     SvgsR,
   },
-  /* created() {
-    window.addEventListener("scroll", this.console());
-  },
-  methods: {
-    ...mapActions({
-      isInViewport: "isInViewport",
-      console: "console",
-    }),
-    scroll() {
-      console.log("alo");
-    },
-  }, */
 };
 </script>
 

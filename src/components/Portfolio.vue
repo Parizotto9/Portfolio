@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio" :class="isShown ? '' : 'space'">
+  <div id="portfolio" class="portfolio" :class="isShown ? '' : 'space'">
     <section class="text" v-if="isShown">
       <h1>Portfolio</h1>
       <p>

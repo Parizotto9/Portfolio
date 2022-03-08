@@ -1,5 +1,5 @@
 <template>
-  <div class="contact" :class="isShown ? '' : 'space'">
+  <div id="contact" class="contact" :class="isShown ? '' : 'space'">
     <section v-if="isShown">
       <h1>Contact me</h1>
     </section>
@@ -65,13 +65,10 @@ export default {
   methods: {
     async scroll() {
       this.isShown = await this.isInViewport();
-      console.log(this.isShown);
     },
     isInViewport() {
       const el = document.querySelector(".contact");
-      console.log(el, "el");
       const rect = el.getBoundingClientRect();
-      console.log(rect.top, rect.bottom, document.documentElement.clientHeight);
       if (this.isShown === true) {
         return (
           rect.top >= 0 &&
