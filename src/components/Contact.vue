@@ -34,7 +34,7 @@
       </div>
       <div class="text">
         <p>
-          Please send me a message, any criticizes, compliments or advices just
+          Please send me a message, any criticizes, compliments or advice just
           let me know that you visited my website, it will make me very happy
         </p>
         <div class="place">

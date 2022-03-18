@@ -3,8 +3,8 @@
     <section class="text" v-if="isShown">
       <h1>Portfolio</h1>
       <p>
-        I am now working as a freelancer for a brazilian company Projeto
-        Internet, as a FrontEnd developer I build responsive and intuitive
+        I am now working as a freelancer for a Brazilian company Projeto
+        Internet, as a FrontEnd developer, I build responsive and intuitive
         pages. I finished three projects with them, after every single one of
         them I realize how much I learned from it, and I want to continue
         growing and learning everything I can.
@@ -58,7 +58,7 @@ export default {
 <style scoped>
 @media (max-width: 600px) {
   .space {
-    margin-top: 726px;
+    margin-bottom: 726px;
   }
   p {
     font-size: 0.92rem;

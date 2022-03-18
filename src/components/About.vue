@@ -12,8 +12,8 @@
           Hello, my name is Daniel Parizotto and I was a civil Engineering
           student, but when the pandemic started, I was so bored that I decided
           to start studying programming, it started as a hobby, but I was too
-          excited, and at some point I decided to change my carrer. Now I am
-          working with it, and excited with my future as a FrontEnd developer,
+          excited, and at some point, I decided to change my career. Now I am
+          working with it, and excited about my future as a FrontEnd developer,
           and maybe a FullStack.
         </p>
       </article>

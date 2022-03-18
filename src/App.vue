@@ -48,11 +48,13 @@ export default {
 body {
   color: #152837;
   background-color: #152837;
+  -webkit-text-size-adjust: none;
 }
 * {
   scroll-behavior: smooth;
   margin: 0px;
   padding: 0px;
-  font-family: "Noto Serif", serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 </style>
